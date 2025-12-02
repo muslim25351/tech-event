@@ -10,6 +10,13 @@ export default function Page() {
         Hackathon, Meetup and Conference, All in one place
       </p>
       <ExploreBtn />
+
+      <div className="mt-20 space-y-7">
+        <h3> Featured Events</h3>
+        {[1, 2, 3, 4, 5].map((event) => (
+          <li key={event}>Events {event}</li>
+        ))}
+      </div>
     </section>
   );
 }
