@@ -1,4 +1,6 @@
+import EventCard from "@/components/EventCard";
 import ExploreBtn from "@/components/ExploreBtn";
+import events from "@/lib/constants";
 
 export default function Page() {
   return (
@@ -11,11 +13,15 @@ export default function Page() {
       </p>
       <ExploreBtn />
 
-      <div className="mt-20 space-y-7">
+      <div className="mt-20 space-y-7  px-[5px] sm:px-[10px]">
         <h3> Featured Events</h3>
-        {[1, 2, 3, 4, 5].map((event) => (
-          <li key={event}>Events {event}</li>
-        ))}
+        <ul className="events ">
+          {events.map((event) => (
+            <li key={event.slug}>
+              <EventCard {...event} />
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
