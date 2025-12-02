@@ -1,3 +1,23 @@
+"use client";
+
+import Image from "next/image";
 export default function ExploreBtn() {
-  return <button onClick={() => console.log("clicked")}>ExploreBtn</button>;
+  return (
+    <button
+      type="button"
+      id="explore-btn"
+      className="mx-auto mt-7"
+      onClick={() => console.log("clicked")}
+    >
+      <a href="#events">
+        Explore Events
+        <Image
+          src="/icons/arrow-down.svg"
+          alt="arrow down"
+          width={24}
+          height={24}
+        />
+      </a>
+    </button>
+  );
 }
